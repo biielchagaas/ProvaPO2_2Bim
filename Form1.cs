@@ -17,10 +17,16 @@ namespace Prova2Bim
             double lucro = Convert.ToDouble(tx_lucro.Text);
             string unidade = cb_unidade.Text;
 
-            Produto produto = new Produto(valor, pis, icms, confins, lucro);
-            double resultado = produto.Calculo(unidade);
-            MessageBox.Show(resultado.ToString("c2"));
-            lb_vlrVenda.Text = resultado.ToString("c2");
+            if (unidade == "")
+            {
+                MessageBox.Show("Escolha uma unidade");
+            }
+            else
+            {
+                Produto produto = new Produto(valor, pis, icms, confins, lucro);
+                double resultado = produto.Calculo(unidade);
+                lb_vlrVenda.Text = resultado.ToString("c2");
+            }
         }
     }
 }

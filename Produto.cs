@@ -2,11 +2,11 @@
 
 public class Produto
 {
-    public double valor;
-    public double pis;
-    public double icms;
-    public double confins;
-    public double lucro;
+    private double valor;
+    private double pis;
+    private double icms;
+    private double confins;
+    private double lucro;
     double[] calc = new double[5];
     double soma = 0;
 
@@ -37,5 +37,30 @@ public class Produto
         {
             return soma;
         }
+    }
+    public double Valor
+    {
+        get { return valor; }
+        set { valor = value; }
+    }
+    public double Pis
+    {
+        get { return pis; }
+        set { pis = value; }
+    }
+    public double Icms
+    {
+        get { return icms; }
+        set { icms = value; }
+    }
+    public double Confins
+    {
+        get { return confins; }
+        set { confins = value; }
+    }
+    public double Lucro
+    {
+        get { return lucro; }
+        set { lucro = value; }
     }
 }
